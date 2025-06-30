@@ -1,0 +1,150 @@
+/* ======  BASIC RESET  ====== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;                 /* centers the card */
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", system-ui, sans-serif;
+  background: linear-gradient(135deg, #58ca9b 0%, #71f65c 100%);
+  color: #1f2937;                /* neutral-900 */
+}
+
+/* ======  CARD  ====== */
+.main {
+  width: 92%;
+  max-width: 420px;
+  padding: 2.5rem 2rem;
+  background: #ffffff;
+  border-radius: 1rem;           /* 16 px */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.075);
+}
+
+/* ======  PASSWORD DISPLAY  ====== */
+#heading {
+  font-size: 1.25rem;            /* 20 px */
+  font-weight: 600;
+  text-align: center;
+  word-break: break-all;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  background: #f3f4f6;           /* neutral-100 */
+  border-radius: 0.5rem;
+  border: 2px dashed #e5e7eb;    /* neutral-200 */
+}
+
+/* ======  RANGE SLIDER  ====== */
+#range {
+  width: 100%;
+  margin: 0.25rem 0 0.75rem;
+  accent-color: #4f46e5;         /* indigo-600 */
+}
+
+#range::-webkit-slider-thumb {
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  border: none;
+  background: #4f46e5;
+  cursor: pointer;
+}
+
+#range::-moz-range-thumb {
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  border: none;
+  background: #4f46e5;
+  cursor: pointer;
+}
+
+/* ======  COPY ICON & LENGTH VALUE  ====== */
+#copy {
+  width: 1.35rem;
+  height: 1.35rem;
+  fill: #4f46e5;
+  cursor: pointer;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  /* vertical-align: middle; */
+  margin-left: 0.4rem;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+#copy:hover {
+  transform: scale(1.15);
+  opacity: 0.85;
+}
+
+#rangeval {
+  text-align: center;
+  font-size: 1.125rem;           /* 18 px */
+  font-weight: 500;
+  color: #4f46e5;
+  margin-bottom: 1.25rem;
+}
+
+/* ======  CHECKBOX GROUP  ====== */
+.select {
+  margin-bottom: 1.5rem;
+}
+
+.select label {
+  text-transform: capitalize;
+  font-size: 0.95rem;
+  margin-left: 0.35rem;
+  cursor: pointer;
+}
+
+.select input[type="checkbox"] {
+  transform: translateY(1px);
+  accent-color: #4f46e5;
+  cursor: pointer;
+}
+
+.select br {
+  line-height: 1rem;           /* tighter spacing between rows */
+}
+
+/* ======  GENERATE BUTTON  ====== */
+#genpass {
+  width: 100%;
+  padding: 0.9rem 0;
+  border: none;
+  border-radius: 0.65rem;
+  background: #4f46e5;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.25px;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.15s ease;
+}
+
+#genpass:hover {
+  background: #4338ca;          /* indigo-700 */
+  transform: translateY(-2px);
+}
+
+#genpass:active {
+  transform: translateY(0);
+}
+
+/* ======  RESPONSIVE TWEAKS  ====== */
+@media (max-width: 380px) {
+  .main {
+    padding: 2rem 1.25rem;
+  }
+
+  #heading {
+    font-size: 1.05rem;
+  }
+}
